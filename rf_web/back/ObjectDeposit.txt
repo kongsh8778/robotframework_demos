@@ -1,0 +1,6 @@
+*** Variables ***
+&{loginPage}      frame=//iframe[contains(@id,"x-URS-iframe")]    userName=//input[@name="email"]    passWord=//input[@name="password"]    loginBtn=dologin    asserContent=//div[text()="通讯录"]
+&{homePage}       addressBook=//div[text()="通讯录"]
+&{addcontactsPage}    createContactsBtn=//span[.="新建联系人"]    contactPersonName=//a[@title="编辑详细姓名"]/preceding-sibling::div/input    contactPersonEmail=//*[@id="iaddress_MAIL_wrap"]//input    starContacts=//span[text()="设为星标联系人"]/preceding-sibling::span/b    contactPersonMobile=//div[.="手机号码"]/following::input[1]    contactPersonComment=//textarea    saveContacePerson=//span[.="确 定"]
+&{sendmailsPage}    writeEmailBtn=//span[.="写 信"]    recivePerson=//div[@title="发给多人时地址请以分号隔开"]//input    subject=//div[@aria-label="邮件主题输入框，请输入邮件主题"]/input    addAttachmentBtn=//div[contains(@title, "600首MP3")]    asserContent=//span[text()="上传完成"]    mailBodyFrame=//iframe[@class="APP-editor-iframe"]    mailBody=//html/body
+...               sendBtn=//div[@class="nui-toolbar-item"]//span[.="发送"]
